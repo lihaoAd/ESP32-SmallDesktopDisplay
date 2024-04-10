@@ -79,15 +79,6 @@ bool Store::commit()
     return EEPROM.commit();
 }
 
-void restoreValue()
-{
-    // 从eeprom读取背光亮度设置
-    //   if (EEPROM.read(BL_addr) > 0 && EEPROM.read(BL_addr) < 100)
-    //     LCD_BL_PWM = EEPROM.read(BL_addr);
-    //   // 从eeprom读取屏幕方向设置
-    //   if (EEPROM.read(Ro_addr) >= 0 && EEPROM.read(Ro_addr) <= 3)
-    //     LCD_Rotation = EEPROM.read(Ro_addr);
-}
 Store::Store()
 {
 }

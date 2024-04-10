@@ -31,11 +31,14 @@ void saveParamCallback()
 
     AppStore.storeValue(BL_addr, AppStore.LCD_BL_PWM);
     AppStore.commit();
+
+    AppStore.storeValue(UPDATEWEATHER_addr, AppStore.updateweatherTime);
+    AppStore.commit();
+
     delay(5);
 
     String cityCode = getParam("CityCode");
     AppStore.storeValue(CC_addr, cityCode);
-
     AppStore.commit();
 
     // 屏幕方向

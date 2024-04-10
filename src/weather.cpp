@@ -69,19 +69,18 @@ void _parseWeaterResponse(const String &str)
   weather.fc = fc["fc"].as<String>();
 
 #if DEBUG
-  Serial.printf("weatherToday %s\r\n",weather.weatherToday.c_str());
-  Serial.printf("temp %d\r\n",weather.temp);
-  Serial.printf("huminum %d\r\n",weather.huminum);
-  Serial.printf("cityName %s\r\n",weather.cityName.c_str());
-   Serial.printf("aqi %d\r\n",weather.aqi);
-   Serial.printf("weather %s\r\n",weather.weather.c_str());
-   Serial.printf("WD %s\r\n",weather.WD.c_str());
-   Serial.printf("WS %s\r\n",weather.WS.c_str());
-   Serial.printf("weathercode %d\r\n",weather.weathercode);
-   Serial.printf("fd %s\r\n",weather.fd.c_str());
-   Serial.printf("fc %s\r\n",weather.fc.c_str());
+  Serial.printf("weatherToday %s\r\n", weather.weatherToday.c_str());
+  Serial.printf("temp %d\r\n", weather.temp);
+  Serial.printf("huminum %s\r\n", weather.huminum.c_str());
+  Serial.printf("cityName %s\r\n", weather.cityName.c_str());
+  Serial.printf("aqi %d\r\n", weather.aqi);
+  Serial.printf("weather %s\r\n", weather.weather.c_str());
+  Serial.printf("WD %s\r\n", weather.WD.c_str());
+  Serial.printf("WS %s\r\n", weather.WS.c_str());
+  Serial.printf("weathercode %d\r\n", weather.weathercode);
+  Serial.printf("fd %s\r\n", weather.fd.c_str());
+  Serial.printf("fc %s\r\n", weather.fc.c_str());
 #endif
- 
 }
 
 // 发送HTTP请求并且将服务器响应通过串口输出
@@ -176,7 +175,7 @@ void getCityWeater(Callback callback)
   {
     String str = httpClient.getString();
 #if DEBUG
-    //Serial.printf("Reponsed GET String : %s", str.c_str());
+    // Serial.printf("Reponsed GET String : %s", str.c_str());
     Serial.println();
 #endif
 

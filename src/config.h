@@ -1,8 +1,6 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#define ON 1
-#define OFF 0
 #define DEBUG 1
 
 #define Animate_Choice 1      //动图选择：1,太空人图片 2,胡桃
@@ -16,7 +14,7 @@
 #define UDP_LOCAL_PORT  8000
 // 配置热点
 #define WEB_AP_NAME "ESP32AP"
-#define WEB_AP_PASSWORD "393592730"
+#define WEB_AP_PASSWORD "123456789"
 
 #define SERIAL_DEBUG_EN 1
 #endif

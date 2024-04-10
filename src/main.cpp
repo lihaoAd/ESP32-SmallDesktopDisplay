@@ -110,6 +110,12 @@ String monthDay()
 
 void saveWificonfig()
 {
+#if DEBUG
+  Serial.printf("SaveWificonfig SSID：%s", AppStore.stassid);
+  Serial.println();
+  Serial.printf("SaveWificonfig PSK:%s", AppStore.stapsw);
+  Serial.println();
+#endif
   AppStore.storeValue(wifi_ssid_addr, AppStore.stassid, sizeof(AppStore.stassid));
   AppStore.storeValue(wifi_pawd_addr, AppStore.stapsw, sizeof(AppStore.stapsw));
   AppStore.commit();
